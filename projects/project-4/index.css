@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pic {
+    width: 90%;
+    height: 100vh;
+    background-image: url(./images/Coffee.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+form {
+    padding: 180px;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.container h1 {
+    font: normal normal 900 43px/63px Heebo;
+    color: #020253;
+}
+
+.container p {
+    font: normal normal normal 20px/29px Heebo;
+    color: #020253;
+}
+
+form label {
+    font: normal normal bold 16px/24px Heebo;
+    color: #2C2C2C;
+    margin-bottom: -15px;
+}
+
+form .input {
+    width: 100%;
+    height: 40px;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    border: none;
+    border-bottom: 3px solid #020253;
+}
+
+#submit {
+    border: none;
+    padding: 5px 30px;
+    background: #020253 0% 0% no-repeat padding-box;
+    text-align: center;
+    font: normal normal bold 22px/30px Heebo;
+    letter-spacing: 0.33px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .pic {
+        background-size: cover;
+        width: 100%;
+        height: 40vh;
+    }
+
+    form {
+
+        padding: 50px;
+        padding-top: 30px;
+    }
+
+    #submit {
+        width: 100%;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .container p {
+        font-size: 18px;
+        margin-top: -15px;
+    }
+}

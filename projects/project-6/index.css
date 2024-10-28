@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 60vh;
+    background: #0EE1E1 0% 0% no-repeat padding-box;
+    display: flex;
+
+}
+
+.container {
+    width: 75%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    margin: auto;
+}
+
+header .box img {
+    width: 270px;
+}
+
+header .content h1 {
+    text-align: right;
+    font: normal normal 900 50px/87px Heebo;
+    color: #000000;
+}
+
+header .content p {
+    text-align: right;
+    font: normal normal normal 20px/29px Heebo;
+    color: #000000;
+}
+
+.fixed img {
+    width: 40px;
+}
+
+.fixed {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    left: 80px;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+    text-align: center;
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 260px;
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+}
+
+.card-title img {
+    width: 50px;
+}
+
+.card-subtitle {
+    font: normal normal 900 30px/44px Heebo;
+    color: #0EE1E1;
+    font-weight: 900;
+}
+
+.card-body .card-text {
+    text-align: center;
+    font: normal normal normal 15px/22px Heebo;
+    color: #000000;
+}
+
+.card-body p {
+    padding: 20px;
+}
+
+.map-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0EE1E1;
+    width: 60%;
+    padding: 70px;
+}
+
+.form-container {
+    background: #F0FFFF 0% 0% no-repeat padding-box;
+    width: 40%;
+    height: 692px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Heebo", sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 10px;
+
+}
+
+.form h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.form p {
+    font: normal normal normal 15px/22px Heebo;
+}
+
+.form label,
+.form textarea {
+    font: normal normal bold 13px/19px Heebo;
+    color: #2C2C2C;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    border: none;
+    border-bottom: 6px solid #0EE1E1;
+}
+
+.form input {
+    height: 40px;
+    margin-top: -10px;
+}
+
+.form textarea {
+    height: 100px;
+}
+
+#submit {
+    font: normal normal bold 20px/28px Heebo;
+    border: none;
+    background-color: #0EE1E1;
+    margin-top: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    gap: 40px;
+}
+
+.footer div {
+    width: 80px;
+    height: 80px;
+    background-color: #0EE1E1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .a a img {
+    width: 40px;
+}
+
+.close {
+    width: 100%;
+    height: 20px;
+    background-color: #0EE1E1;
+}
+
+@media (max-width: 1030px) {
+
+    .container {
+        gap: 0;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    header .box img {
+        width: 100px;
+    }
+
+    header .content h1 {
+        font-size: 30px;
+    }
+
+    header .content p {
+        font-size: 15px;
+    }
+
+    .row {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-body {
+        width: 300px;
+        height: 240px;
+        margin: auto;
+    }
+
+    .map-form {
+        flex-direction: column-reverse;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .form {
+        margin: 50px;
+    }
+
+    .map {
+        width: 100%;
+        height: 280px;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+
+    .footer {
+        gap: 10px;
+    }
+
+    .footer div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer .a a img {
+        width: 20px;
+    }
+
+    .fixed {
+        display: none;
+    }
+}

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 60%;
+    height: 60%;
+}
+
+h1 {
+    font: normal normal normal 140px/211px Satisfy;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 36px #00000087;
+    text-align: center;
+}
+
+.container .first-par {
+    margin-top: -10px;
+    font: normal normal normal 28px/34px Varela Round;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.container .sec-par {
+    margin: 10px 0 20px 0;
+    direction: rtl;
+    text-align: center;
+    font: normal normal normal 13px/17px Varela Round;
+    color: #F9F9F9;
+}
+
+form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+}
+
+.label {
+    direction: rtl;
+}
+
+form label {
+    font: normal normal normal 13px/17px Varela Round;
+    color: #F9F9F9;
+}
+
+form input {
+    width: 400px;
+    height: 30px;
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+}
+
+#button {
+    width: 200px;
+    height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    text-align: center;
+    font: normal normal normal 13px/17px Varela Round;
+    color: #1C1C1C;
+}
+
+@media (max-width:1024px) {
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    .container .sec-par {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+
+    form {
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input {
+        width: 100%;
+        height: 40px;
+    }
+
+    #button {
+        width: 100%;
+        height: 40px;
+    }
+
+}
+
+@media (max-width:400px) {
+
+    h1 {
+        font-size: 72px;
+    }
+
+    .container .first-par {
+        font-size: 23px;
+    }
+
+    .container .sec-par {
+        font-size: 17px;
+    }
+
+    form {
+        padding-bottom: 20px;
+    }
+}
