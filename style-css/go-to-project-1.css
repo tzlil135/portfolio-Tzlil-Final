@@ -166,6 +166,7 @@ footer {
     font-size: 14px;
     font-family: "Raleway", sans-serif;
     color: white;
+    color: brown;
 }
 
 @media (max-width: 1024px) {
