@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", serif;
+    background-image: url(./images/pexels-codioful-6984988.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    border: none;
+    width: 280px;
+    height: 70px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(174, 151, 174);
+    box-shadow: 0 0 20px 5px rgba(215, 121, 204, 0.715);
+    transition: all 0.2s;
+}
+
+.buttons:hover {
+    background-color: rgb(215, 121, 204);
+    color: white;
+}
+
+#game-screen {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-over {
+    display: none;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.396);
+    padding: 27px;
+    border-radius: 12px;
+}
+
+.board-btn {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.607);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#box-red {
+    border: none;
+    background-color: rgb(206, 98, 83);
+    border-radius: 12px;
+}
+
+#box-blue {
+    border: none;
+    background-color: rgb(96, 100, 212);
+    border-radius: 12px;
+}
+
+#box-yellow {
+    border: none;
+    background-color: rgb(209, 207, 105);
+    border-radius: 12px;
+}
+
+#box-green {
+    border: none;
+    background-color: rgb(86, 188, 86);
+    border-radius: 12px;
+}
+
+.game-over {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#steps {
+    font-size: 1.4rem;
+    color: aliceblue;
+    font-family: "Poppins", serif;
+}
+
+@media (max-width: 576px) {
+    .buttons {
+        width: 200px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    .board {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .board-btn {
+        width: 100px;
+        height: 100px;
+    }
+
+    #steps {
+        font-size: 1rem;
+    }
+
+    .game-over {
+        flex-direction: column;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .buttons {
+        width: 250px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .board-btn {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 992px) {
+    .board-btn {
+        width: 200px;
+        height: 200px;
+    }
+}

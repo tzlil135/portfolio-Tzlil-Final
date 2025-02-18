@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(134, 189, 233);
+    font-family: "Poppins", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(241, 244, 245);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.select-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(108, 153, 198);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(65, 108, 150);
+}
+
+.btn-after-click {
+    background-color: rgb(65, 108, 150);
+}
+
+.stats-container {
+    position: absolute;
+    top: 50%;
+    /* מיקום באמצע גובה הדף */
+    left: 50%;
+    /* מיקום באמצע רוחב הדף */
+    transform: translate(-50%, -50%);
+    /* מזיז את הקונטיינר בחזרה לחצי גודלו */
+    text-align: center;
+    /* ממקם את הטקסט במרכז */
+    background-color: rgba(17, 62, 104, 0.582);
+    /* רקע כהה מעט כדי להדגיש את הסטטוס */
+    color: rgb(255, 255, 255);
+    /* צבע טקסט לבן */
+    padding: 30px;
+    border-radius: 8px;
+    display: none;
+
+}
+
+#canvas {
+    border: 2px solid rgb(85, 128, 170);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.letter {
+    font-size: 1.2rem;
+    color: rgb(6, 17, 28);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#word-container {
+    font-size: 1.5rem;
+}
+
+#layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+#massage {
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+#playAgain {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(108, 153, 198);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 20px;
+}
+
+#playAgain:hover {
+    background-color: rgb(65, 108, 150);
+}
+
+@media screen and (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        min-width: 200px;
+    }
+
+    .letters {
+        width: 90%;
+        gap: 5px;
+    }
+
+    .letter {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    #canvas {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    #word-container {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .select-option p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        min-width: 150px;
+    }
+
+    .letters {
+        width: 95%;
+        gap: 3px;
+    }
+
+    .letter {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    #word-container {
+        font-size: 1rem;
+    }
+
+    .stats-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #stats {
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    #massage {
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    #playAgain {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .game-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .select-option {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    #canvas {
+        width: 300px;
+        height: auto;
+    }
+
+    .letters {
+        width: 45%;
+        order: 2;
+    }
+
+    #canvas-container {
+        width: 45%;
+        order: 1;
+    }
+
+    #word-container {
+        width: 100%;
+        text-align: center;
+        order: 3;
+    }
+}

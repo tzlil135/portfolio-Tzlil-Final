@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="./image/calendar.png">
+
+    <title>My Planner</title>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="calendar" id="calendar">
+            <div id="month-year-display" class="month-year-display">
+                <button class="month-display" id="month-display">
+                </button>
+                <div class="year-display" id="year-display">
+                    <button id="prev-year">◀</button>
+                    <span id="year-number"></span>
+                    <button id="next-year">▶</button>
+                </div>
+            </div>
+            <div id="days-of-week">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="days"></div>
+            <div class="current-day" id="current-day">
+                <p id="today-title">TODAY |</p>
+                <div class="time-date">
+                    <p class="time" id="time"></p>
+                    <p class="toay-date" id="today-date"></p>
+                </div>
+            </div>
+            <div class="month-choose" id="month-choose">
+                <div class="month-names" id="month-names">
+                    <div>January</div>
+                    <div>February</div>
+                    <div>March</div>
+                    <div>April</div>
+                    <div>May</div>
+                    <div>June</div>
+                    <div>July</div>
+                    <div>August</div>
+                    <div>September</div>
+                    <div>October</div>
+                    <div>November</div>
+                    <div>December</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

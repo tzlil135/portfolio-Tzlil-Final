@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", serif;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(236, 248, 236);
+    padding-left: 40px;
+
+    h1 {
+        font-size: 40px;
+        color: rgb(7, 22, 7);
+        margin-bottom: 20px;
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.form-div input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(182, 214, 206);
+    outline: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#login-btn,
+#signin-btn {
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(7, 22, 7);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+#login-btn:hover {
+    background-color: rgb(130, 152, 146);
+}
+
+.sign-in-btn,
+.already-signed-in {
+    color: rgb(47, 51, 85);
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    color: rgb(130, 152, 146);
+}
+
+.already-signed-in:hover {
+    color: rgb(130, 152, 146);
+}
+
+.sign-in {
+    display: none;
+}
+
+.rest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(7, 22, 7);
+}
+
+.rest .image #cheese {
+    width: 100px;
+    height: 100px;
+}
+
+.rest .image #burger {
+    width: 160px;
+    height: 160px;
+    margin-top: 100px;
+}
+
+.rest .image #noodles {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 150px;
+}
+
+.quotes #quote1 {
+    position: absolute;
+    top: 20px;
+    left: 75%;
+    transform: translateX(-75%);
+    text-align: center;
+    z-index: 1000;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    opacity: 0;
+}
+
+
+.quotes #quote2 {
+    position: absolute;
+    bottom: 25px;
+    left: 76%;
+    transform: translateX(-10%);
+    text-align: center;
+    z-index: 1000;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        height: 100%;
+    }
+
+    .body-container {
+        flex-direction: column;
+    }
+
+    .wrapper,
+    .rest {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+    }
+
+    .rest {
+        padding: 100px 0;
+    }
+
+    .wrapper {
+        align-items: center;
+        text-align: center;
+    }
+
+    .login-form,
+    .sign-in-form {
+        width: 100%;
+        align-items: center;
+    }
+
+    .form-div input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .quotes {
+        display: none;
+    }
+
+    .rest .image {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .rest .image #burger,
+    .rest .image #noodles,
+    .rest .image #cheese {
+        margin: 0;
+    }
+
+    .rest .image #cheese {
+        width: 80px;
+        height: 80px;
+    }
+
+    .rest .image #burger {
+        width: 110px;
+        height: 110px;
+
+    }
+
+    .rest .image #noodles {
+        width: 50px;
+        height: 50px;
+    }
+}

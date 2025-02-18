@@ -9,6 +9,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style-css/index.css">
+    <script src="./scripts/index.js" defer></script>
+
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,7 +144,7 @@
 
     <div class="projects" id="projects">
         <div class="projects-title">
-            <h2>Projects</h2>
+            <h2 id="html-css-title">HTML CSS</h2>
         </div>
         <div class="projects-items">
             <div class="item1">
@@ -255,6 +258,113 @@
         </div>
     </div>
 
+    <!--js projects-->
+
+    <div class="js-projects" id="js-projects">
+        <div class="projects-title">
+            <h2 id="js-title">JAVA SCRIPT</h2>
+        </div>
+        <div class="js-item" id="calculator-game">
+            <div class="js-description">
+                <h2>CALCULATOR GAME</h2>
+                <p class="date">FEB 2025</p>
+                <p>Solve math problems and challenge your calculation skills</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-1.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="flags">
+            <div class="js-description">
+                <h2>FLAGS</h2>
+                <p class="date">FEB 2025</p>
+                <p>Test your knowledge by identifying country flags</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-2.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="memory-game">
+            <div class="js-description">
+                <h2>MEMORY GAME</h2>
+                <p class="date">FEB 2025</p>
+                <p>Match pairs of cards</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-3.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="hangman">
+            <div class="js-description">
+                <h2>HANGMAN</h2>
+                <p class="date">FEB 2025</p>
+                <p>Guess the word before the man is hanged</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-4.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="pixel-art-maker">
+            <div class="js-description">
+                <h2>PIXEL ART MAKER</h2>
+                <p class="date">FEB 2025</p>
+                <p>Draw your favorites</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-5.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="simon-says">
+            <div class="js-description">
+                <h2>SIMON SAYS</h2>
+                <p class="date">FEB 2025</p>
+                <p>Follow the colors and sound</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-6.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="calendar">
+            <div class="js-description">
+                <h2>CALENDAR</h2>
+                <p class="date">FEB 2025</p>
+                <p>Organize your dates and events</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-7.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="burger-vs-pizza">
+            <div class="js-description">
+                <h2>BURGER VS PIZZA</h2>
+                <p class="date">FEB 2025</p>
+                <p>Register and try it today!</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-8.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+        <div class="js-item" id="weather">
+            <div class="js-description">
+                <h2>WEATHER</h2>
+                <p class="date">FEB 2025</p>
+                <p>Check the weather forecast with ease</p>
+                <div class="little-b">
+                    <a href="./go-to-js-project-9.html" target="_blank">Go To Project<img src="./images/arrow (1).png"
+                            alt="go to"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--יצירת קשר-->
 
     <footer class="contact" id="contact">
@@ -300,11 +410,12 @@
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" required
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                                 placeholder="enter your email here">
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" required
+                            <input type="tel" class="form-control" id="phone" pattern="[0-9]{9,10}"
                                 placeholder="enter your phone here">
                         </div>
                         <div class="mb-3">
@@ -312,8 +423,8 @@
                             <textarea class="form-control" id="message" rows="3" required
                                 placeholder="enter your massage here"></textarea>
                         </div>
-                        <button class="medium-b button-c">
-                            <a href="#">Send form<img src="./images/arrow (1).png" alt="go to"></a>
+                        <button id="forn-btn" type="submit" class="medium-b button-c">
+                            Send form <img src="./images/arrow (1).png" alt="go to">
                         </button>
                     </form>
                 </div>
@@ -323,6 +434,12 @@
                     <p>2024 Tzlil Cohen Portfolio. All rights reserved</p>
                 </div>
 
+            </div>
+        </div>
+        <div id="pop-up">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <p>Form was sent successfully!</p>
             </div>
         </div>
     </footer>

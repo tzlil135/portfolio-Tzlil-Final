@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(248, 73, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* כללי */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(248, 73, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* מסך ההתחלה */
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* כפתור ההתחלה */
+.wrapper button {
+    background-color: rgb(255, 230, 245);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.3s ease;
+}
+
+.wrapper button:hover {
+    color: rgb(248, 73, 128);
+}
+
+/* מסך המשחק */
+.game-container {
+    width: auto;
+    height: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 0.9375rem 1.40625rem rgba(94, 27, 58, 0.475);
+    padding: 20px;
+}
+
+#stop-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+
+#stop-button:hover {
+    color: rgb(248, 73, 128);
+}
+
+#game-board {
+    position: relative;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* תמיד 4 עמודות */
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+}
+
+.card-before,
+.card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #ec597d solid 2px;
+    transition: transform 0.5s ease-out;
+    backface-visibility: hidden;
+}
+
+.card-before {
+    background-color: #ec597d;
+    font-size: 2.8em;
+    font-weight: 600;
+}
+
+.card-after {
+    background-color: #eadde2;
+    transform: rotateY(180deg);
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-container.flipped .card-before {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+    transform: rotateY(0deg);
+}
+
+/* Your existing CSS remains the same until media queries */
+
+/* Tablet Devices */
+@media screen and (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #game-board {
+        gap: 8px;
+    }
+
+    .card-container {
+        width: 5em;
+        height: 5em;
+    }
+
+    .card-before {
+        font-size: 2.2em;
+    }
+
+    .wrapper button,
+    #stop-button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 480px) {
+    .game-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    #game-board {
+        gap: 5px;
+    }
+
+    .card-container {
+        width: 4em;
+        height: 4em;
+    }
+
+    .card-before {
+        font-size: 1.8em;
+    }
+
+    .wrapper button,
+    #stop-button {
+        font-size: 18px;
+        padding: 8px 14px;
+    }
+
+    #moves-counter,
+    #time-counter {
+        font-size: 14px;
+    }
+}
+
+/* Very Small Devices */
+@media screen and (max-width: 320px) {
+    .game-container {
+        width: 98%;
+        padding: 8px;
+    }
+
+    #game-board {
+        gap: 4px;
+    }
+
+    .card-container {
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    .card-before {
+        font-size: 1.5em;
+    }
+
+    .wrapper button,
+    #stop-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .wrapper {
+        height: auto;
+        padding: 20px;
+    }
+
+    .game-container {
+        margin: 10px;
+    }
+
+    #game-board {
+        gap: 6px;
+    }
+
+    .card-container {
+        width: 4.5em;
+        height: 4.5em;
+    }
+}
+
+/* For larger screens */
+@media screen and (min-width: 1024px) {
+    .game-container {
+        max-width: 900px;
+    }
+
+    .card-container {
+        width: 7em;
+        height: 7em;
+    }
+
+    .card-before {
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/pexels-karolina-grabowska-5412499.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Federo", serif;
+}
+
+.start {
+    margin-right: 350px;
+}
+
+.restart,
+.stop-game,
+.start-game {
+    padding: 14px 20px;
+    background-color: rgb(159, 255, 137);
+    border: solid 5px rgb(33, 80, 23);
+    border-radius: 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+    transition: 0.3s ease;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Federo", serif;
+    font-weight: 500;
+}
+
+.start-game,
+.restart {
+    font-size: 30px;
+}
+
+
+.restart:hover,
+.stop-game:hover,
+.start-game:hover {
+    scale: calc(1.05);
+}
+
+.stats {
+    display: none;
+}
+
+.game-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    background-color: rgba(166, 208, 155, 0.779);
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+    padding: 50px;
+
+    h1 {
+        font-size: 60px;
+        color: rgb(33, 80, 23);
+        font-weight: 700;
+    }
+}
+
+#distructions {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 40px;
+    font-weight: 400;
+    direction: ltr;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container input {
+    width: 100px;
+    height: 50px;
+    background-color: rgba(29, 78, 17, 0.34);
+    border: none;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+.sameline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#submit {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(33, 80, 23);
+    border: none;
+    font-size: 20px;
+    color: black;
+    transition: 0.3s ease;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#submit:hover {
+    color: white;
+}
+
+.stop-game {
+    margin-top: 80px;
+}
+
+#check {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+.stats {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 350px;
+    gap: 20px;
+
+    h2 {
+        font-size: 60px;
+        color: rgb(33, 80, 23);
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 30px;
+        color: rgb(33, 80, 23);
+        font-weight: 700;
+    }
+}
+
+
+@media screen and (max-width: 1025px) {
+
+
+    .start {
+        margin-right: 0;
+    }
+
+    .game-container {
+        width: 90%;
+        padding: 25px;
+        margin: auto;
+    }
+
+    .game-container h1 {
+        font-size: 40px;
+    }
+
+    #distructions {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    .question-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #question {
+        font-size: 30px;
+    }
+
+    .container input {
+        width: 80px;
+        height: 45px;
+        font-size: 30px;
+    }
+
+    .sameline {
+        gap: 15px;
+    }
+
+    #check {
+        margin-top: 150px;
+    }
+
+    .stats h2 {
+        font-size: 40px;
+    }
+
+    .stats p {
+        font-size: 25px;
+    }
+
+    .restart,
+    .stop-game,
+    .start-game {
+        padding: 12px 18px;
+        font-size: 18px;
+    }
+
+    .start-game,
+    .restart {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .game-container h1 {
+        font-size: 32px;
+    }
+
+    #distructions {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #question {
+        font-size: 25px;
+    }
+
+    .container input {
+        width: 70px;
+        height: 40px;
+        font-size: 25px;
+    }
+
+    .sameline {
+        gap: 10px;
+    }
+
+    #submit {
+        width: 90px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #check {
+        bottom: 100px;
+    }
+
+    .stats h2 {
+        font-size: 32px;
+    }
+
+    .stats p {
+        font-size: 20px;
+    }
+
+    .restart,
+    .stop-game,
+    .start-game {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .start-game,
+    .restart {
+        font-size: 22px;
+    }
+
+    .stop-game {
+        margin-top: 40px;
+    }
+
+    #check {
+        font-size: 18px;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .game-container h1 {
+        font-size: 28px;
+    }
+
+    #question {
+        font-size: 22px;
+    }
+
+    .container input {
+        width: 60px;
+        height: 35px;
+        font-size: 22px;
+    }
+
+    #submit {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .stats h2 {
+        font-size: 28px;
+    }
+
+    .stats p {
+        font-size: 18px;
+    }
+
+    .restart,
+    .stop-game,
+    .start-game {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .start-game,
+    .restart {
+        font-size: 20px;
+    }
+}

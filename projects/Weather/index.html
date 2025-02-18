@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="./image/cloudy.png" type="image/x-icon">
+
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper" id="wrapper">
+            <div class="form-control">
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="Enter city name">
+                <button id="searchBtn">
+                    <img src="./image/search-interface-symbol.png" alt="search">
+                </button>
+            </div>
+            <div class="weather-data" id="weather-data">
+                <h1 class="city" id="city"></h1>
+                <p class="temp" id="temp"></p>
+                <img id="icon" src="" alt="">
+                <p class="desc" id="desc"></p>
+                <div class="error-massage" id="error-massage"></div>
+            </div>
+        </div>
+        <div class="more-info" id="more-info">
+            <p id="humidity">Humidity: </p>
+            <p id="wind-speed">Wind Speed: </p>
+            <p id="pressure">Pressure: </p>
+            <div class="for-week">
+                <h2>For the week</h2>
+                <div class="week" id="week">
+                    <div class="day">
+                        <p id="day1"></p>
+                        <p id="temp1"></p>
+                        <img id="icon1" src="" alt="">
+                    </div>
+                    <div class="day">
+                        <p id="day2"></p>
+                        <p id="temp2"></p>
+                        <img id="icon2" src="" alt="">
+                    </div>
+                    <div class="day">
+                        <p id="day3"></p>
+                        <p id="temp3"></p>
+                        <img id="icon3" src="" alt="">
+                    </div>
+                    <div class="day">
+                        <p id="day4"></p>
+                        <p id="temp4"></p>
+                        <img id="icon4" src="" alt="">
+                    </div>
+                    <div class="day">
+                        <p id="day5"></p>
+                        <p id="temp5"></p>
+                        <img id="icon5" src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

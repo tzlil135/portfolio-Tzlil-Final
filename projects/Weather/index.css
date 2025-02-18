@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./image/clouds.jpg");
+    background-size: cover;
+    font-family: "Quicksand", serif;
+    color: white;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    padding: 100px 0;
+    width: 100%;
+    height: 100vh;
+    margin-left: 110px;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+#searchBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#searchBtn img {
+    width: 30px;
+    height: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ff94bba5, #7679d1a8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out forwards;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    left: 0;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#search {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 15px;
+}
+
+#search::placeholder {
+    color: white;
+    font-family: "Quicksand", serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+#search:valid {
+    background: none;
+}
+
+
+.weather-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+#icon {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.more-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(135deg, #ff94bba5, #7679d1a8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+    max-width: 0;
+    overflow: hidden;
+}
+
+.more-info.show {
+    opacity: 1;
+    transform: translateX(0);
+    max-width: 100%;
+}
+
+/* When more-info is shown, move the wrapper to the left */
+.more-info.show~.wrapper {
+    transform: translateX(-170px);
+}
+
+.container:has(.more-info.show) {
+    margin-left: 0;
+}
+
+.week {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.week h2 {
+    font-size: 20px;
+}
+
+.day {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 18%;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.day img {
+    width: 50px;
+    height: 50px;
+}
+
+.day:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        margin-left: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .wrapper,
+    .more-info {
+        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-control {
+        flex-direction: column;
+    }
+
+    #search {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .day {
+        max-width: none;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        gap: 15px;
+    }
+
+    .week {
+        gap: 10px;
+    }
+
+    .day {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@layer utilities {
+    .fade-in-right {
+        animation: fadeInRight 1s ease-out forwards;
+    }
+
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(14, 14, 14);
+    background-color: #000000;
 }
 
 .container-fluid a img {
@@ -46,9 +46,9 @@ body {
 header {
     width: 100%;
     height: 90vh;
-    background-image: url(../images/bg-1-copy.jpg);
+    background-image: url(../images/pexels-photo-13073600.jpeg);
     background-size: cover;
-    background-position: top center;
+    background-position: top 40% center;
     background-repeat: no-repeat;
     margin-top: -10px;
     display: flex;
@@ -127,6 +127,9 @@ header {
 }
 
 .about-me {
+    width: 100%;
+    padding: 70px;
+    background-color: #131313;
     color: white;
     font-family: "Raleway", sans-serif;
     display: flex;
@@ -134,7 +137,6 @@ header {
     align-items: center;
     justify-content: center;
     gap: 60px;
-    margin: 80px;
 }
 
 .about-me h2,
@@ -209,9 +211,9 @@ header {
     height: auto;
     padding-top: 30px;
     padding-bottom: 50px;
-    background-image: url(../images/Untitled_Artwork\ \(2\).JPG);
+    background-image: url(../images/d.JPG);
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     background-repeat: no-repeat;
     border-top: 0.4px solid white;
     border-bottom: 0.4px solid white;
@@ -219,6 +221,8 @@ header {
 
 .projects-title h2 {
     text-align: center;
+    font-size: 110px;
+    letter-spacing: 0.08cap;
 }
 
 .item1,
@@ -232,24 +236,23 @@ header {
 .item2 img,
 .item3 img {
     width: 35%;
-    border-radius: 30px;
 }
 
 .item1 {
     align-items: start;
-    margin: 80px;
+    margin: 95px;
 }
 
 .item2 {
     justify-content: center;
     align-items: center;
-    margin: 80px;
+    margin: 95px;
 }
 
 .item3 {
     justify-content: end;
     align-items: end;
-    margin: 80px;
+    margin: 95px;
 }
 
 .item1 h2,
@@ -312,7 +315,9 @@ header {
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 40px;
+    width: 100%;
+    padding: 50px;
+    background-color: #131313;
 }
 
 .socials {
@@ -378,6 +383,15 @@ header {
     margin-bottom: 30px;
 }
 
+#forn-btn {
+    border: none;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    width: 170px;
+    border-bottom: solid 1px white;
+}
+
 .rights {
     display: flex;
     flex-direction: column;
@@ -393,11 +407,217 @@ header {
     margin: 30px;
 }
 
+#pop-up {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #19e4e4;
+    font-size: 30px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 60px;
+    cursor: pointer;
+}
+
 .closer {
     background-color: #19e4e4;
     width: 100%;
     height: 20px;
 }
+
+#js-title {
+    padding-top: 100px 0;
+}
+
+
+.js-projects {
+    padding: 50px 0;
+    border-bottom: 0.4px solid white;
+    background-image: url(../images/Untitled_Artwork\ \(2\).JPG);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+.js-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    opacity: 0;
+    /* נסתיר את התמונה בהתחלה */
+    clip-path: inset(0 0 100% 0);
+    /* חיתוך מלא מהחלק התחתון */
+    transition: opacity 1s ease-out, clip-path 1s ease-out;
+}
+
+.js-item.visible {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+}
+
+.js-description {
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.93), rgba(18, 220, 255, 0.259));
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    transition: opacity 0.5s;
+    opacity: 0;
+
+    h2 {
+        font-family: "Oswald", sans-serif;
+        font-weight: 800;
+        color: #19e4e4;
+        font-size: 30px;
+        letter-spacing: 0.05cap;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+        margin: 0;
+    }
+}
+
+.js-description .date {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.js-description .little-b {
+    margin-top: 10px;
+}
+
+.js-description:hover {
+    opacity: 1;
+}
+
+#calculator-game {
+    background-image: url(../images/js/calculator-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 600px;
+    height: 260px;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+#flags {
+    background-image: url(../images/js/flags-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    margin-left: 650px;
+}
+
+#memory-game {
+    background-image: url(../images/js/memory-game-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 550px;
+    height: 300px;
+    margin-left: 100px;
+}
+
+#hangman {
+    background-image: url(../images/js/hangman-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 700px;
+    height: 350px;
+    margin-left: 650px;
+}
+
+#pixel-art-maker {
+    background-image: url(../images/js/pixel-art-maker-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+    height: 250px;
+    margin-left: 150px;
+}
+
+#simon-says {
+    background-image: url(../images/js/simon-says-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    margin-left: 650px;
+}
+
+#calendar {
+    background-image: url(../images/js/calendar-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 600px;
+    height: 350px;
+    margin-left: 50px;
+}
+
+#burger-vs-pizza {
+    background-image: url(../images/js/burger-vs-pizza.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 700px;
+    height: 350px;
+    margin-left: 650px;
+}
+
+#weather {
+    background-image: url(../images/js/weather-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 250px;
+    margin-left: 250px;
+}
+
+
 
 /*media part*/
 
@@ -482,7 +702,6 @@ header {
     .item1 .img,
     .item3 .img {
         width: 95%;
-        border-radius: 20px;
     }
 
     .description {
@@ -497,13 +716,60 @@ header {
 
     .projects-title {
         font-size: 60px;
-        margin-top: -20px;
-        margin-bottom: 20px;
+        margin: 0;
+    }
+
+    #html-css-title {
+        margin-bottom: 50px;
+    }
+
+    .js-projects {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    #calculator-game,
+    #flags,
+    #memory-game,
+    #hangman,
+    #pixel-art-maker,
+    #simon-says,
+    #calendar,
+    #burger-vs-pizza,
+    #weather {
+        width: 95%;
+        height: 400px;
+        margin-left: 0;
+    }
+
+    .js-description {
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .projects-title h2 {
+        font-size: 50px;
+    }
+
+    #js-title {
+        margin-bottom: -100px;
     }
 
     .contact {
         flex-direction: column-reverse;
         flex-wrap: wrap;
+        width: 100%;
+        padding: 30px 0;
 
     }
 
@@ -535,5 +801,37 @@ header {
     .socials div a img {
         width: 40px;
         gap: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #calculator-game,
+    #flags,
+    #memory-game,
+    #hangman,
+    #pixel-art-maker,
+    #simon-says,
+    #calendar,
+    #burger-vs-pizza,
+    #weather {
+        height: 200px;
+    }
+
+    .popup-content {
+        width: 70%;
+        height: 30%;
+        display: flex;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 0px;
+        right: 30px;
+        font-size: 40px;
+        cursor: pointer;
     }
 }

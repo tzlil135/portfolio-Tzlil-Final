@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="./images/calculator.png">
+
+    <title>Catlculator Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="start" id="start">
+            <button class="start-game" id="start-game">Start Game</button>
+        </div>
+        <div class="game-container" id="game-container">
+            <h1>Calculator Game</h1>
+            <p id="distructions">There are 10 math questions in this game. You need to answer each question correctly.
+                Your score will be given after
+                you've answered all 10 questions.</p>
+            <div class="question-container">
+                <div id="question"></div>
+                <div class="sameline"><input id="input" type="text" id="answer">
+                    <button id="submit">Check</button>
+                </div>
+                <div id="check"></div>
+            </div>
+            <button class="stop-game" id="stop-game">Stop Game</button>
+        </div>
+        <div class="stats" id="stats">
+            <h2 id="h2"></h2>
+            <p id="score"></p>
+            <button class="restart" id="restart">Restart Game</button>
+        </div>
+    </div>
+</body>
+
+</html>
