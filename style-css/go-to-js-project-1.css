@@ -240,8 +240,17 @@ footer {
 
     .header-content h1 {
 
-        margin-top: 240px;
+        margin-top: 260px;
         font-size: 40px;
 
+    }
+
+    .icons {
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .icons img {
+        width: 70px;
     }
 }
