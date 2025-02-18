@@ -166,16 +166,7 @@ body {
 
 @media screen and (max-width: 1025px) {
     body {
-        width: 100%;
-        height: 100vh;
-        background-image: url(./images/pexels-karolina-grabowska-5412499.jpg);
-        background-size: cover;
         background-position: right 25% center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "Federo", serif;
     }
 
     .start {
